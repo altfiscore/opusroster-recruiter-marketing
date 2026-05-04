@@ -148,16 +148,20 @@ export function Card({
   className?: string;
   href?: string;
 }) {
-  const Tag = href ? Link : "div";
+  const baseClass = "block rounded-2xl border border-[#2A2D30]/10 bg-white p-7 transition";
+  const hoverClass = "hover:-translate-y-0.5 hover:border-[#3AB0A2]/30 hover:shadow-lg hover:shadow-[#2A2D30]/5";
+
+  if (href) {
+    return (
+      <Link href={href} className={`${baseClass} ${hoverClass} ${className}`}>
+        {children}
+      </Link>
+    );
+  }
   return (
-    <Tag
-      {...(href ? { href } : {})}
-      className={`block rounded-2xl border border-[#2A2D30]/10 bg-white p-7 transition ${
-        href ? "hover:-translate-y-0.5 hover:border-[#3AB0A2]/30 hover:shadow-lg hover:shadow-[#2A2D30]/5" : ""
-      } ${className}`}
-    >
+    <div className={`${baseClass} ${className}`}>
       {children}
-    </Tag>
+    </div>
   );
 }
 
