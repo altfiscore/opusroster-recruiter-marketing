@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: "DM Sans", system-ui, sans-serif;
+    --font-display: "Instrument Serif", Georgia, serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F5F7FA;
+    color: #2A2D30;
+    font-feature-settings: "ss01", "cv11", "cv02";
+  }
+
+  body {
+    font-weight: 450;
+    letter-spacing: -0.005em;
+  }
+
+  h1, h2 {
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    color: #2A2D30;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2A2D30;
+  }
+}
+
+@layer utilities {
+  .text-2xs {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
