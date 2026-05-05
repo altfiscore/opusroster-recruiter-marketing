@@ -199,16 +199,17 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* DISTRIBUTION */}
+      <div className="bg-navy">
       <Section>
         <Container>
           <div className="max-w-3xl">
             <Eyebrow>Distribution that works while you sleep</Eyebrow>
-            <SectionH2>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mt-4 leading-tight">
               Post once. Boosted to <Underline>100+ ATS networks</Underline>.
-            </SectionH2>
-            <Lede>
+            </h2>
+            <p className="mt-6 text-lg text-white/80 leading-relaxed">
               Every job you post hits the OpusRoster candidate marketplace and gets syndicated to 100+ ATS networks, niche boards, and aggregators. Candidates apply directly into your pipeline — no extra ads, no separate dashboards, no recruiter time lost to copy-paste.
-            </Lede>
+            </p>
             <div className="mt-8 grid sm:grid-cols-3 gap-6">
               {[
                 "Indeed, LinkedIn, ZipRecruiter, Monster, Glassdoor",
@@ -224,6 +225,7 @@ export default function ForAgenciesPage() {
           </div>
         </Container>
       </Section>
+      </div>
 
       {/* PLAN RECOMMENDATION */}
       <Section>

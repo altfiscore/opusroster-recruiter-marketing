@@ -165,17 +165,18 @@ export default function TrustPage() {
       </Section>
 
       {/* AI ETHICS */}
+      <div className="bg-navy">
       <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>AI Ethics</Eyebrow>
-            <SectionH2>
+            <h2 className="text-4xl md:text-5xl font-serif text-white mt-4 leading-tight">
               The agents do the <Em>work</Em>.<br />
               You make the <Underline>calls.</Underline>
-            </SectionH2>
-            <Lede>
+            </h2>
+            <p className="mt-6 text-lg text-white/80 leading-relaxed">
               AI in recruiting only works if recruiters can trust it. Trust comes from transparency, control, and predictable behavior. Here is exactly how OpusRoster’s AI is designed.
-            </Lede>
+            </p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {AI_PRINCIPLES.map((p) => (
@@ -193,6 +194,7 @@ export default function TrustPage() {
           </div>
         </Container>
       </Section>
+      </div>
 
       {/* COMPLIANCE */}
       <Section>
