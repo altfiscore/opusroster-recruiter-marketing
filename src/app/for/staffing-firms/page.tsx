@@ -33,7 +33,7 @@ const PAINS = [
   },
   {
     title: "Your competitors are getting MSP-quality reach on a SMB budget",
-    body: "Top staffing firms invest millions in sourcing tech. You can\u2019t. But your clients judge you against them anyway.",
+    body: "Top staffing firms invest millions in sourcing tech. You can’t. But your clients judge you against them anyway.",
   },
 ];
 
@@ -41,7 +41,7 @@ const PLATFORM_PIECES = [
   {
     icon: Target,
     title: "Sourcer Agent",
-    body: "Pulls fresh candidates daily across every active req \u2014 hundreds at a time. Scoring is consistent, bias-aware, and auditable. Your bench refreshes itself.",
+    body: "Pulls fresh candidates daily across every active req — hundreds at a time. Scoring is consistent, bias-aware, and auditable. Your bench refreshes itself.",
   },
   {
     icon: Zap,
@@ -51,7 +51,7 @@ const PLATFORM_PIECES = [
   {
     icon: Users,
     title: "Outreach Agent",
-    body: "Personalized at scale. Every contractor gets a real email referencing their last engagement, their tech stack, and the new opportunity. Reply rates that templated mail-merge can\u2019t touch.",
+    body: "Personalized at scale. Every contractor gets a real email referencing their last engagement, their tech stack, and the new opportunity. Reply rates that templated mail-merge can’t touch.",
   },
   {
     icon: Shield,
@@ -90,7 +90,7 @@ export default function ForStaffingPage() {
               On a <Underline>SMB budget.</Underline>
             </DisplayH1>
             <Lede>
-              Staffing firms compete on speed, volume, and bench depth. The big shops do it with seven-figure tech budgets and dedicated sourcing teams. OpusRoster gives you the same firepower \u2014 daily sourcing, automated outreach, intelligent triage, multi-client pipelines \u2014 for $230/mo per recruiter.
+              Staffing firms compete on speed, volume, and bench depth. The big shops do it with seven-figure tech budgets and dedicated sourcing teams. OpusRoster gives you the same firepower — daily sourcing, automated outreach, intelligent triage, multi-client pipelines — for $230/mo per recruiter.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
               <PrimaryButton href={`${APP_URL}/sign-in?mode=signup`}>
@@ -134,7 +134,7 @@ export default function ForStaffingPage() {
               Every part of the staffing workflow. <Underline>Automated.</Underline>
             </SectionH2>
             <Lede>
-              From discovery to submittal to compliance audit \u2014 OpusRoster runs the recruiting workflow end-to-end. Your team becomes a closing engine instead of a sourcing factory.
+              From discovery to submittal to compliance audit — OpusRoster runs the recruiting workflow end-to-end. Your team becomes a closing engine instead of a sourcing factory.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,7 +183,7 @@ export default function ForStaffingPage() {
               <Em>$230/recruiter/month.</Em> Same firepower as the Fortune 500 staffing tech stack.
             </SectionH2>
             <Lede>
-              Major staffing firms spend $1K\u20135K per recruiter per month on a stitched-together stack: Bullhorn + LinkedIn Recruiter + sourcing tool + email automation + scheduling. OpusRoster is one platform, one bill, one login.
+              Major staffing firms spend $1K–5K per recruiter per month on a stitched-together stack: Bullhorn + LinkedIn Recruiter + sourcing tool + email automation + scheduling. OpusRoster is one platform, one bill, one login.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -207,7 +207,7 @@ export default function ForStaffingPage() {
               <Underline>Every req</Underline>. Every network. <Em>Every day.</Em>
             </SectionH2>
             <Lede>
-              Post once \u2014 OpusRoster syndicates to the marketplace, 100+ ATS networks, niche boards, and regional aggregators. Active candidates apply directly. Passive candidates get personalized outreach from the Sourcer Agent. You cover both halves of the market without doubling headcount.
+              Post once — OpusRoster syndicates to the marketplace, 100+ ATS networks, niche boards, and regional aggregators. Active candidates apply directly. Passive candidates get personalized outreach from the Sourcer Agent. You cover both halves of the market without doubling headcount.
             </Lede>
           </div>
         </Container>
@@ -220,22 +220,22 @@ export default function ForStaffingPage() {
             <Eyebrow>Which plan</Eyebrow>
             <SectionH2>For staffing, <Em>Business</Em> is the only answer.</SectionH2>
             <Lede>
-              Pro\u2019s 5-job cap won\u2019t fit a single staffing recruiter\u2019s desk, let alone a firm. Business gives unlimited reqs, the Sourcer Agent on autopilot, and 1,000 sourced candidates per month per seat. Volume credits are available as add-ons for high-throughput desks.
+              Pro’s 5-job cap won’t fit a single staffing recruiter’s desk, let alone a firm. Business gives unlimited reqs, the Sourcer Agent on autopilot, and 1,000 sourced candidates per month per seat. Volume credits are available as add-ons for high-throughput desks.
             </Lede>
           </div>
           <div className="grid md:grid-cols-1 gap-6 max-w-3xl">
             <Card>
-              <div className="text-sm font-medium text-teal mb-2">Business \u2014 $230/mo per recruiter</div>
+              <div className="text-sm font-medium text-teal mb-2">Business — $230/mo per recruiter</div>
               <h3 className="text-2xl font-serif text-graphite mb-4">For staffing desks running real volume</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Unlimited active jobs</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />1,000 sourced candidates per month per seat</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Sourcer Agent autopilot \u2014 5 candidates per job per day</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Sourcer Agent autopilot — 5 candidates per job per day</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Triage Agent every 4 hours</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Marketplace + 100+ ATS distribution</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Multi-client portals (white-labeled)</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Volume credit add-ons available</li>
-                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Full audit trail \u2014 every email, every action</li>
+                <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Full audit trail — every email, every action</li>
               </ul>
             </Card>
           </div>

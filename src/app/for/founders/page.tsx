@@ -20,8 +20,8 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter
 
 const PAINS = [
   {
-    title: "You\u2019re the recruiter and you don\u2019t want to be",
-    body: "Every hour you spend Boolean-searching LinkedIn is an hour not spent on the product, the customers, the round. But you can\u2019t hand it off \u2014 you don\u2019t have anyone to hand it to.",
+    title: "You’re the recruiter and you don’t want to be",
+    body: "Every hour you spend Boolean-searching LinkedIn is an hour not spent on the product, the customers, the round. But you can’t hand it off — you don’t have anyone to hand it to.",
   },
   {
     title: "Agencies want $25K + 6 months of relationship",
@@ -29,11 +29,11 @@ const PAINS = [
   },
   {
     title: "Your job posts disappear into the void",
-    body: "You posted on LinkedIn. Got 200 unqualified resumes and 0 actual leads. The 1% of candidates you actually want are passive \u2014 they never see job posts.",
+    body: "You posted on LinkedIn. Got 200 unqualified resumes and 0 actual leads. The 1% of candidates you actually want are passive — they never see job posts.",
   },
   {
     title: "Every hire is your first hire",
-    body: "You\u2019re hiring roles you\u2019ve never hired before. You don\u2019t have a calibrated screen, you don\u2019t know the market rate, you don\u2019t have a pipeline. You\u2019re flying blind.",
+    body: "You’re hiring roles you’ve never hired before. You don’t have a calibrated screen, you don’t know the market rate, you don’t have a pipeline. You’re flying blind.",
   },
 ];
 
@@ -41,17 +41,17 @@ const PLATFORM_PIECES = [
   {
     icon: Target,
     title: "Sourcer Agent",
-    body: "You write the job once. Every morning at 6am, the Sourcer pulls 5 fresh candidates that match \u2014 from a 3B+ profile database. No more LinkedIn rabbit holes.",
+    body: "You write the job once. Every morning at 6am, the Sourcer pulls 5 fresh candidates that match — from a 3B+ profile database. No more LinkedIn rabbit holes.",
   },
   {
     icon: Zap,
     title: "Triage Agent",
-    body: "Auto-rejects bad-fit candidates, escalates good ones. Your pipeline self-organizes while you\u2019re building product.",
+    body: "Auto-rejects bad-fit candidates, escalates good ones. Your pipeline self-organizes while you’re building product.",
   },
   {
     icon: Users,
     title: "Outreach Agent",
-    body: "Personalized outreach to every candidate, written in your voice, referencing their actual background and why your company is interesting. Reads like a founder writing at midnight \u2014 because that\u2019s the voice we trained it on.",
+    body: "Personalized outreach to every candidate, written in your voice, referencing their actual background and why your company is interesting. Reads like a founder writing at midnight — because that’s the voice we trained it on.",
   },
   {
     icon: Shield,
@@ -61,7 +61,7 @@ const PLATFORM_PIECES = [
   {
     icon: Globe,
     title: "Marketplace + 100+ ATS Networks",
-    body: "Post your job once. It hits the OpusRoster marketplace and gets boosted to 100+ ATS networks and job boards \u2014 Indeed, LinkedIn, AngelList, niche boards. Apps come straight into your pipeline.",
+    body: "Post your job once. It hits the OpusRoster marketplace and gets boosted to 100+ ATS networks and job boards — Indeed, LinkedIn, AngelList, niche boards. Apps come straight into your pipeline.",
   },
   {
     icon: TrendingUp,
@@ -90,7 +90,7 @@ export default function ForFoundersPage() {
               without becoming a <Underline>recruiter.</Underline>
             </DisplayH1>
             <Lede>
-              Founders shouldn\u2019t be the source-of-record for sourcing. But until you can afford a TA hire, the work falls on you. OpusRoster runs your top-of-funnel \u2014 sourcing, outreach, replies, scheduling \u2014 so the only thing you do is the closing call. The part you\u2019re actually good at.
+              Founders shouldn’t be the source-of-record for sourcing. But until you can afford a TA hire, the work falls on you. OpusRoster runs your top-of-funnel — sourcing, outreach, replies, scheduling — so the only thing you do is the closing call. The part you’re actually good at.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
               <PrimaryButton href={`${APP_URL}/sign-in?mode=signup`}>
@@ -134,7 +134,7 @@ export default function ForFoundersPage() {
               Your <Underline>recruiting team in a tab.</Underline>
             </SectionH2>
             <Lede>
-              Most founders cobble together LinkedIn Recruiter, a CRM, an email tool, and a calendar. OpusRoster is all of it \u2014 sourcing, scoring, outreach, replies, scheduling, distribution \u2014 in one platform that runs while you\u2019re heads-down.
+              Most founders cobble together LinkedIn Recruiter, a CRM, an email tool, and a calendar. OpusRoster is all of it — sourcing, scoring, outreach, replies, scheduling, distribution — in one platform that runs while you’re heads-down.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -161,7 +161,7 @@ export default function ForFoundersPage() {
             <Eyebrow>Outreach that actually converts</Eyebrow>
             <SectionH2>Personalized. Per candidate. <Em>Every time.</Em></SectionH2>
             <Lede>
-              No mail-merge. The Outreach Agent reads each candidate\u2019s background, your role, and writes a real email. Reply rates 3\u20135x what you\u2019d get from a templated blast.
+              No mail-merge. The Outreach Agent reads each candidate’s background, your role, and writes a real email. Reply rates 3–5x what you’d get from a templated blast.
             </Lede>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -183,7 +183,7 @@ export default function ForFoundersPage() {
               <Em>$89/month</Em> vs. 10 hours/week of your time.
             </SectionH2>
             <Lede>
-              If your time is worth even $50/hour, OpusRoster pays for itself the first day. If it\u2019s worth $500/hour (it is), it\u2019s the highest-ROI subscription you\u2019ll buy this year.
+              If your time is worth even $50/hour, OpusRoster pays for itself the first day. If it’s worth $500/hour (it is), it’s the highest-ROI subscription you’ll buy this year.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -202,12 +202,12 @@ export default function ForFoundersPage() {
       <Section>
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow>Reach candidates LinkedIn won\u2019t show you</Eyebrow>
+            <Eyebrow>Reach candidates LinkedIn won’t show you</Eyebrow>
             <SectionH2>
               Your job, on <Underline>100+ networks</Underline>. While you sleep.
             </SectionH2>
             <Lede>
-              Most founders post on LinkedIn and call it done. OpusRoster syndicates every job to the OpusRoster marketplace and 100+ ATS networks \u2014 Indeed, AngelList, niche boards, regional aggregators \u2014 so passive and active candidates both find you. Apps flow into your pipeline automatically.
+              Most founders post on LinkedIn and call it done. OpusRoster syndicates every job to the OpusRoster marketplace and 100+ ATS networks — Indeed, AngelList, niche boards, regional aggregators — so passive and active candidates both find you. Apps flow into your pipeline automatically.
             </Lede>
           </div>
         </Container>
@@ -220,13 +220,13 @@ export default function ForFoundersPage() {
             <Eyebrow>Which plan</Eyebrow>
             <SectionH2>For founders, start on <Em>Pro</Em>.</SectionH2>
             <Lede>
-              You\u2019re probably hiring 1\u20133 roles at a time. Pro\u2019s 350 candidates/month and 5 active jobs is plenty. When you grow past 5 simultaneous reqs or want full autopilot sourcing, Business is the upgrade.
+              You’re probably hiring 1–3 roles at a time. Pro’s 350 candidates/month and 5 active jobs is plenty. When you grow past 5 simultaneous reqs or want full autopilot sourcing, Business is the upgrade.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
             <Card>
-              <div className="text-sm font-medium text-teal mb-2">Pro \u2014 $89/mo \u2190 recommended</div>
-              <h3 className="text-2xl font-serif text-graphite mb-4">For founders hiring 1\u20135 roles</h3>
+              <div className="text-sm font-medium text-teal mb-2">Pro — $89/mo ← recommended</div>
+              <h3 className="text-2xl font-serif text-graphite mb-4">For founders hiring 1–5 roles</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />5 active jobs</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />350 sourced candidates/mo</li>
@@ -236,8 +236,8 @@ export default function ForFoundersPage() {
               </ul>
             </Card>
             <Card>
-              <div className="text-sm font-medium text-graphite/60 mb-2">Business \u2014 $230/mo</div>
-              <h3 className="text-2xl font-serif text-graphite mb-4">When you\u2019re hiring 6+ at once</h3>
+              <div className="text-sm font-medium text-graphite/60 mb-2">Business — $230/mo</div>
+              <h3 className="text-2xl font-serif text-graphite mb-4">When you’re hiring 6+ at once</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Unlimited active jobs</li>
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />1,000 candidates/mo</li>
