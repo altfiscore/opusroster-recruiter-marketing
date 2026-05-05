@@ -5,6 +5,8 @@ import {
   Underline, Em, PrimaryButton, SecondaryButton, Section,
 } from "@/components/marketing/Sections";
 import { MessageSquare, ThumbsUp, ThumbsDown, AlertTriangle, Check, ArrowRight } from "lucide-react";
+import ProductScreenshot from "@/components/marketing/ProductScreenshot";
+import { inboxScreenshot } from "@/lib/screenshots";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://opus-rosterrecruiter.vercel.app";
 
@@ -205,6 +207,23 @@ export default function ReplyAgentPage() {
           </div>
         </Container>
       </Section>
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Eyebrow>See it in action</Eyebrow>
+            <SectionH2 className="mt-4">One inbox. Every reply, classified.</SectionH2>
+            <p className="mt-6 text-lg text-graphite/70">Replies land in your unified inbox — sorted into Interested, Declined, and Needs Review. AI drafts a response for every one; you approve or rewrite.</p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <ProductScreenshot
+              src={inboxScreenshot}
+              alt="OpusRoster inbox showing candidate conversations and AI-drafted replies"
+              blurRegions={[{ top: "30%", bottom: "10%", left: "8%", right: "8%", height: "auto" }]}
+            />
+          </div>
+        </Container>
+      </section>
+
     </>
   );
 }

@@ -5,6 +5,8 @@ import {
   Underline, Em, PrimaryButton, SecondaryButton, Section,
 } from "@/components/marketing/Sections";
 import { Search, Clock, Shield, Filter, Check, ArrowRight } from "lucide-react";
+import ProductScreenshot from "@/components/marketing/ProductScreenshot";
+import { candidatesScreenshot } from "@/lib/screenshots";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://opus-rosterrecruiter.vercel.app";
 
@@ -204,6 +206,23 @@ export default function SourcerAgentPage() {
           </div>
         </Container>
       </Section>
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Eyebrow>See it in action</Eyebrow>
+            <SectionH2 className="mt-4">Every sourced candidate, scored and ready</SectionH2>
+            <p className="mt-6 text-lg text-graphite/70">Candidates surface in your talent pool with fit scores, location, and outreach status — no spreadsheets, no copy-paste.</p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <ProductScreenshot
+              src={candidatesScreenshot}
+              alt="OpusRoster talent pool showing sourced candidates with fit scores"
+              blurRegions={[{ top: "30%", bottom: "10%", left: "8%", right: "8%", height: "auto" }]}
+            />
+          </div>
+        </Container>
+      </section>
+
     </>
   );
 }

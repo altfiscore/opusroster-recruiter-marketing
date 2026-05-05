@@ -5,6 +5,8 @@ import {
   Underline, Em, PrimaryButton, SecondaryButton, Section,
 } from "@/components/marketing/Sections";
 import { Filter, RefreshCw, AlertCircle, TrendingDown, Check, ArrowRight } from "lucide-react";
+import ProductScreenshot from "@/components/marketing/ProductScreenshot";
+import { pipelineScreenshot } from "@/lib/screenshots";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://opus-rosterrecruiter.vercel.app";
 
@@ -197,6 +199,23 @@ export default function TriageAgentPage() {
           </div>
         </Container>
       </Section>
+      <section className="py-20 bg-white">
+        <Container>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <Eyebrow>See it in action</Eyebrow>
+            <SectionH2 className="mt-4">Your pipeline, kept in sync</SectionH2>
+            <p className="mt-6 text-lg text-graphite/70">Triage moves candidates between Applied, Sourced, Shortlisted, Contacted, Replied, and Interviewing — automatically. You stay in the driver’s seat.</p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <ProductScreenshot
+              src={pipelineScreenshot}
+              alt="OpusRoster pipeline kanban with candidates organized by stage"
+              blurRegions={[{ top: "30%", bottom: "10%", left: "8%", right: "8%", height: "auto" }]}
+            />
+          </div>
+        </Container>
+      </section>
+
     </>
   );
 }
