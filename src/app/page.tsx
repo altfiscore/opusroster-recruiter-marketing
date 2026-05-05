@@ -120,10 +120,6 @@ export default function MarketingHome() {
                 width={1400}
                 height={900}
                 edgeFade={true}
-                blurRegions={[
-                  // Recent activity column - emails (right side)
-                  { x: 75, y: 50, w: 22, h: 35 },
-                ]}
               />
             </div>
           </div>
