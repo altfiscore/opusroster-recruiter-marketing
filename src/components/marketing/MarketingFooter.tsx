@@ -34,13 +34,21 @@ const FOOTER_SECTIONS = [
       { href: `${APP_URL}/sign-in?mode=signup`, label: "Start free trial" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { href: "/privacy", label: "Privacy Policy" },
+      { href: "/terms", label: "Terms of Service" },
+      { href: "/trust", label: "Security" },
+    ],
+  },
 ];
 
 export function MarketingFooter() {
   return (
     <footer className="border-t border-[#2A2D30]/8 bg-white">
       <div className="mx-auto max-w-[1200px] px-6 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_2.6fr]">
           {/* Brand block */}
           <div>
             <Link href="/" className="flex items-center gap-2.5">
@@ -53,16 +61,10 @@ export function MarketingFooter() {
               Recruiting software, built by recruiters.
               Full AI team — sourcing, outreach, replies, scheduling.
             </p>
-            <p className="mt-6 text-sm text-[#2A2D30]/55">
-              <span className="inline-flex items-center gap-2 rounded-full bg-[#B7E4C7]/40 px-3 py-1">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#3AB0A2]" />
-                SOC 2 Type 2 in progress
-              </span>
-            </p>
           </div>
 
           {/* Sitemap */}
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {FOOTER_SECTIONS.map((section) => (
               <div key={section.title}>
                 <h4 className="mb-4 text-sm font-medium uppercase tracking-wider text-[#2A2D30]/50">
@@ -91,10 +93,10 @@ export function MarketingFooter() {
             © {new Date().getFullYear()} OpusRoster. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-[#2A2D30]/55">
-            <Link href="/trust" className="hover:text-[#2A2D30]">
+            <Link href="/privacy" className="hover:text-[#2A2D30]">
               Privacy
             </Link>
-            <Link href="/trust" className="hover:text-[#2A2D30]">
+            <Link href="/terms" className="hover:text-[#2A2D30]">
               Terms
             </Link>
             <Link href="/trust" className="hover:text-[#2A2D30]">
