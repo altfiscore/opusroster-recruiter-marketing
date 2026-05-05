@@ -17,6 +17,7 @@ import {
 } from "@/components/marketing/Sections";
 import ProductScreenshot from "@/components/marketing/ProductScreenshot";
 import { Search, Filter, Send, MessageSquare, Calendar, Users, ArrowRight, Check } from "lucide-react";
+import { dashboardScreenshot } from "@/lib/screenshots";
 
 const AGENTS = [
   {
@@ -115,11 +116,8 @@ export default function MarketingHome() {
               <div className="absolute -left-4 -bottom-12 h-40 w-40 rounded-full bg-[#3AB0A2]/10" aria-hidden />
 
               <ProductScreenshot
-                src="/marketing/dashboard-hero.png"
+                src={dashboardScreenshot}
                 alt="OpusRoster dashboard showing active searches, pipeline stages, and recent autopilot activity"
-                width={1400}
-                height={900}
-                edgeFade={true}
               />
             </div>
           </div>
