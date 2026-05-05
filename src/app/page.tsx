@@ -15,7 +15,7 @@ import {
   Card,
   Section,
 } from "@/components/marketing/Sections";
-import { ProductScreenshot } from "@/components/marketing/ProductScreenshot";
+import ProductScreenshot from "@/components/marketing/ProductScreenshot";
 import { Search, Filter, Send, MessageSquare, Calendar, Users, ArrowRight, Check } from "lucide-react";
 
 const AGENTS = [
