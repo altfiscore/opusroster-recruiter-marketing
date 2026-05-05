@@ -186,7 +186,7 @@ export default function OutreachAgentPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <Eyebrow>See it in action</Eyebrow>
             <SectionH2 className="mt-4">Personalized outreach, written for each candidate</SectionH2>
-            <p className="mt-6 text-lg text-graphite/70">Every email references the candidate’s actual background. No “Hi {{firstName}}” templates. No mass blasts. Reads like you wrote it.</p>
+            <p className="mt-6 text-lg text-graphite/70">Every email references the candidate’s actual background. No {"“Hi {{firstName}}”"} templates. No mass blasts. Reads like you wrote it.</p>
           </div>
           <div className="max-w-5xl mx-auto">
             <ProductScreenshot
