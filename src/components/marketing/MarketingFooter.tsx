@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter.vercel.app";
+
 const FOOTER_SECTIONS = [
   {
     title: "Product",
@@ -28,8 +30,8 @@ const FOOTER_SECTIONS = [
     links: [
       { href: "/about", label: "About" },
       { href: "/trust", label: "Trust & Security" },
-      { href: "/sign-in", label: "Sign in" },
-      { href: "/sign-in?mode=signup", label: "Start free trial" },
+      { href: `${APP_URL}/sign-in`, label: "Sign in" },
+      { href: `${APP_URL}/sign-in?mode=signup`, label: "Start free trial" },
     ],
   },
 ];

@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Logo } from "@/components/brand/Logo";
 import { ChevronDown, Menu, X } from "lucide-react";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter.vercel.app";
+
 const FEATURES = [
   { href: "/features/sourcer-agent", label: "Sourcer Agent", desc: "Auto-source candidates daily" },
   { href: "/features/triage-agent", label: "Triage Agent", desc: "Auto-shortlist top fits" },
@@ -105,13 +107,13 @@ export function MarketingNav() {
         {/* Right CTAs (desktop) */}
         <div className="hidden items-center gap-3 lg:flex">
           <Link
-            href="/sign-in"
+            href={`${APP_URL}/sign-in`}
             className="rounded-lg px-3 py-2 text-[15px] text-[#2A2D30]/80 transition hover:text-[#2A2D30]"
           >
             Sign in
           </Link>
           <Link
-            href="/sign-in?mode=signup"
+            href={`${APP_URL}/sign-in?mode=signup`}
             className="rounded-full bg-[#3AB0A2] px-5 py-2.5 text-[14px] font-medium text-white transition hover:bg-[#329a8e]"
           >
             Start free trial
@@ -178,14 +180,14 @@ export function MarketingNav() {
 
             <div className="mt-4 flex flex-col gap-2">
               <Link
-                href="/sign-in"
+                href={`${APP_URL}/sign-in`}
                 onClick={() => setMobileOpen(false)}
                 className="rounded-lg border border-[#2A2D30]/15 px-4 py-2.5 text-center text-[15px]"
               >
                 Sign in
               </Link>
               <Link
-                href="/sign-in?mode=signup"
+                href={`${APP_URL}/sign-in?mode=signup`}
                 onClick={() => setMobileOpen(false)}
                 className="rounded-lg bg-[#3AB0A2] px-4 py-2.5 text-center text-[15px] font-medium text-white"
               >

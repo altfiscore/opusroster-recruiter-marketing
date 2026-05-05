@@ -19,6 +19,8 @@ import ProductScreenshot from "@/components/marketing/ProductScreenshot";
 import { Search, Filter, Send, MessageSquare, Calendar, Users, ArrowRight, Check } from "lucide-react";
 import { dashboardScreenshot } from "@/lib/screenshots";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter.vercel.app";
+
 const AGENTS = [
   {
     icon: Search,
@@ -100,7 +102,7 @@ export default function MarketingHome() {
               </Lede>
 
               <div className="mt-10 flex flex-wrap items-center gap-3">
-                <PrimaryButton href="/sign-in?mode=signup">Start free trial</PrimaryButton>
+                <PrimaryButton href={`${APP_URL}/sign-in?mode=signup`}>Start free trial</PrimaryButton>
                 <SecondaryButton href="/pricing">See pricing</SecondaryButton>
               </div>
 
@@ -302,7 +304,7 @@ export default function MarketingHome() {
               Free 5-day trial. 50 sourcing credits. Full pipeline. No credit card.
             </Lede>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-              <PrimaryButton href="/sign-in?mode=signup">Start free trial</PrimaryButton>
+              <PrimaryButton href={`${APP_URL}/sign-in?mode=signup`}>Start free trial</PrimaryButton>
               <SecondaryButton href="/pricing">View pricing</SecondaryButton>
             </div>
           </div>
