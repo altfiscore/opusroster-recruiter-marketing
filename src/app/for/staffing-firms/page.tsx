@@ -81,15 +81,15 @@ export default function ForStaffingPage() {
   return (
     <main>
       {/* HERO */}
-      <Section className="pt-20 pb-16">
+      <Section>
         <Container>
           <div className="max-w-4xl">
             <Eyebrow>For Staffing Firms</Eyebrow>
-            <DisplayH1 className="mt-6">
+            <DisplayH1>
               Contract placements at <Em>MSP scale</Em>.<br />
               On a <Underline>SMB budget.</Underline>
             </DisplayH1>
-            <Lede className="mt-8 max-w-3xl">
+            <Lede>
               Staffing firms compete on speed, volume, and bench depth. The big shops do it with seven-figure tech budgets and dedicated sourcing teams. OpusRoster gives you the same firepower \u2014 daily sourcing, automated outreach, intelligent triage, multi-client pipelines \u2014 for $230/mo per recruiter.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -106,11 +106,11 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* PAIN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>Why staffing margins compress</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Volume is your <Em>weapon</Em>. And your <Underline>weakness.</Underline>
             </SectionH2>
           </div>
@@ -126,14 +126,14 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* PLATFORM */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The full platform</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Every part of the staffing workflow. <Underline>Automated.</Underline>
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               From discovery to submittal to compliance audit \u2014 OpusRoster runs the recruiting workflow end-to-end. Your team becomes a closing engine instead of a sourcing factory.
             </Lede>
           </div>
@@ -155,12 +155,12 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* SCREENSHOT */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <Eyebrow>Pipeline at staffing volume</Eyebrow>
-            <SectionH2 className="mt-4">Hundreds of candidates. <Em>One pipeline.</Em></SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>Hundreds of candidates. <Em>One pipeline.</Em></SectionH2>
+            <Lede>
               Triage moves candidates between stages automatically. Auto-rejects timed-out applicants. Surfaces hot replies. Your recruiters focus on submittals, not data entry.
             </Lede>
           </div>
@@ -175,14 +175,14 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* MATH */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The math</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               <Em>$230/recruiter/month.</Em> Same firepower as the Fortune 500 staffing tech stack.
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               Major staffing firms spend $1K\u20135K per recruiter per month on a stitched-together stack: Bullhorn + LinkedIn Recruiter + sourcing tool + email automation + scheduling. OpusRoster is one platform, one bill, one login.
             </Lede>
           </div>
@@ -199,14 +199,14 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* DISTRIBUTION */}
-      <Section className="py-20 bg-navy text-white">
+      <Section>
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow className="text-mint">Distribution at staffing scale</Eyebrow>
-            <SectionH2 className="mt-4 text-white">
+            <Eyebrow>Distribution at staffing scale</Eyebrow>
+            <SectionH2>
               <Underline>Every req</Underline>. Every network. <Em>Every day.</Em>
             </SectionH2>
-            <Lede className="mt-6 text-white/80">
+            <Lede>
               Post once \u2014 OpusRoster syndicates to the marketplace, 100+ ATS networks, niche boards, and regional aggregators. Active candidates apply directly. Passive candidates get personalized outreach from the Sourcer Agent. You cover both halves of the market without doubling headcount.
             </Lede>
           </div>
@@ -214,17 +214,17 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* PLAN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-12">
             <Eyebrow>Which plan</Eyebrow>
-            <SectionH2 className="mt-4">For staffing, <Em>Business</Em> is the only answer.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>For staffing, <Em>Business</Em> is the only answer.</SectionH2>
+            <Lede>
               Pro\u2019s 5-job cap won\u2019t fit a single staffing recruiter\u2019s desk, let alone a firm. Business gives unlimited reqs, the Sourcer Agent on autopilot, and 1,000 sourced candidates per month per seat. Volume credits are available as add-ons for high-throughput desks.
             </Lede>
           </div>
           <div className="grid md:grid-cols-1 gap-6 max-w-3xl">
-            <Card className="border-2 border-teal">
+            <Card>
               <div className="text-sm font-medium text-teal mb-2">Business \u2014 $230/mo per recruiter</div>
               <h3 className="text-2xl font-serif text-graphite mb-4">For staffing desks running real volume</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
@@ -248,7 +248,7 @@ export default function ForStaffingPage() {
       </Section>
 
       {/* FINAL CTA */}
-      <Section className="py-24 bg-cream">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <SectionH2>

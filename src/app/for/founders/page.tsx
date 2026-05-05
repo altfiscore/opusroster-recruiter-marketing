@@ -81,15 +81,15 @@ export default function ForFoundersPage() {
   return (
     <main>
       {/* HERO */}
-      <Section className="pt-20 pb-16">
+      <Section>
         <Container>
           <div className="max-w-4xl">
             <Eyebrow>For Founders Hiring</Eyebrow>
-            <DisplayH1 className="mt-6">
+            <DisplayH1>
               Hire your first <Em>10 employees</Em><br />
               without becoming a <Underline>recruiter.</Underline>
             </DisplayH1>
-            <Lede className="mt-8 max-w-3xl">
+            <Lede>
               Founders shouldn\u2019t be the source-of-record for sourcing. But until you can afford a TA hire, the work falls on you. OpusRoster runs your top-of-funnel \u2014 sourcing, outreach, replies, scheduling \u2014 so the only thing you do is the closing call. The part you\u2019re actually good at.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -106,11 +106,11 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* PAIN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>Why founders get stuck</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Hiring is the <Em>second-most-important thing</Em> you do. And the <Underline>least leveraged.</Underline>
             </SectionH2>
           </div>
@@ -126,14 +126,14 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* PLATFORM */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The full platform</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Your <Underline>recruiting team in a tab.</Underline>
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               Most founders cobble together LinkedIn Recruiter, a CRM, an email tool, and a calendar. OpusRoster is all of it \u2014 sourcing, scoring, outreach, replies, scheduling, distribution \u2014 in one platform that runs while you\u2019re heads-down.
             </Lede>
           </div>
@@ -155,12 +155,12 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* SCREENSHOT */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <Eyebrow>Outreach that actually converts</Eyebrow>
-            <SectionH2 className="mt-4">Personalized. Per candidate. <Em>Every time.</Em></SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>Personalized. Per candidate. <Em>Every time.</Em></SectionH2>
+            <Lede>
               No mail-merge. The Outreach Agent reads each candidate\u2019s background, your role, and writes a real email. Reply rates 3\u20135x what you\u2019d get from a templated blast.
             </Lede>
           </div>
@@ -175,14 +175,14 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* MATH */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The math</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               <Em>$89/month</Em> vs. 10 hours/week of your time.
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               If your time is worth even $50/hour, OpusRoster pays for itself the first day. If it\u2019s worth $500/hour (it is), it\u2019s the highest-ROI subscription you\u2019ll buy this year.
             </Lede>
           </div>
@@ -199,14 +199,14 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* DISTRIBUTION */}
-      <Section className="py-20 bg-navy text-white">
+      <Section>
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow className="text-mint">Reach candidates LinkedIn won\u2019t show you</Eyebrow>
-            <SectionH2 className="mt-4 text-white">
+            <Eyebrow>Reach candidates LinkedIn won\u2019t show you</Eyebrow>
+            <SectionH2>
               Your job, on <Underline>100+ networks</Underline>. While you sleep.
             </SectionH2>
-            <Lede className="mt-6 text-white/80">
+            <Lede>
               Most founders post on LinkedIn and call it done. OpusRoster syndicates every job to the OpusRoster marketplace and 100+ ATS networks \u2014 Indeed, AngelList, niche boards, regional aggregators \u2014 so passive and active candidates both find you. Apps flow into your pipeline automatically.
             </Lede>
           </div>
@@ -214,17 +214,17 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* PLAN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-12">
             <Eyebrow>Which plan</Eyebrow>
-            <SectionH2 className="mt-4">For founders, start on <Em>Pro</Em>.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>For founders, start on <Em>Pro</Em>.</SectionH2>
+            <Lede>
               You\u2019re probably hiring 1\u20133 roles at a time. Pro\u2019s 350 candidates/month and 5 active jobs is plenty. When you grow past 5 simultaneous reqs or want full autopilot sourcing, Business is the upgrade.
             </Lede>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
-            <Card className="border-2 border-teal">
+            <Card>
               <div className="text-sm font-medium text-teal mb-2">Pro \u2014 $89/mo \u2190 recommended</div>
               <h3 className="text-2xl font-serif text-graphite mb-4">For founders hiring 1\u20135 roles</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
@@ -254,7 +254,7 @@ export default function ForFoundersPage() {
       </Section>
 
       {/* FINAL CTA */}
-      <Section className="py-24 bg-cream">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <SectionH2>

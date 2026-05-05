@@ -81,15 +81,15 @@ export default function ForAgenciesPage() {
   return (
     <main>
       {/* HERO */}
-      <Section className="pt-20 pb-16">
+      <Section>
         <Container>
           <div className="max-w-4xl">
             <Eyebrow>For Recruiting Agencies</Eyebrow>
-            <DisplayH1 className="mt-6">
+            <DisplayH1>
               Bill for <Em>placements</Em>.<br />
               Not for <Underline>sourcing.</Underline>
             </DisplayH1>
-            <Lede className="mt-8 max-w-3xl">
+            <Lede>
               Your team\u2019s time is the most expensive ingredient in every search. OpusRoster runs the parts of recruiting you shouldn\u2019t be paying senior people to do \u2014 sourcing, triage, outreach, reply management \u2014 so your recruiters spend their day on the work clients actually pay for: closing.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -106,11 +106,11 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* PAIN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The agency margin trap</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               You\u2019re running an <Em>arbitrage business</Em> on time you don\u2019t have.
             </SectionH2>
           </div>
@@ -126,14 +126,14 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* PLATFORM */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The full platform</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Not a tool. A <Underline>recruiting team</Underline> that doesn\u2019t take vacation.
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               Most AI recruiting tools give you one thing \u2014 a sourcer, a chatbot, a scheduler. OpusRoster is the entire stack: discovery, scoring, outreach, reply management, scheduling, distribution, and client collaboration in one platform.
             </Lede>
           </div>
@@ -155,12 +155,12 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* SCREENSHOT */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <Eyebrow>One dashboard. Every search.</Eyebrow>
-            <SectionH2 className="mt-4">Run 20 retained searches like it\u2019s 2.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>Run 20 retained searches like it\u2019s 2.</SectionH2>
+            <Lede>
               Active jobs, sourced candidates, in-flight outreach, replies needing attention \u2014 every search, every client, in one view.
             </Lede>
           </div>
@@ -175,14 +175,14 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* MATH */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The math</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               <Em>$89/month</Em> replaces what a junior recruiter does in a week.
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               Most agencies pay $5K\u201315K/month for a sourcing recruiter. OpusRoster\u2019s Pro plan handles 350 candidates a month for less than the cost of a tank of gas. Business plan handles 1,000.
             </Lede>
           </div>
@@ -199,14 +199,14 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* DISTRIBUTION */}
-      <Section className="py-20 bg-navy text-white">
+      <Section>
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow className="text-mint">Distribution that works while you sleep</Eyebrow>
-            <SectionH2 className="mt-4 text-white">
+            <Eyebrow>Distribution that works while you sleep</Eyebrow>
+            <SectionH2>
               Post once. Boosted to <Underline>100+ ATS networks</Underline>.
             </SectionH2>
-            <Lede className="mt-6 text-white/80">
+            <Lede>
               Every job you post hits the OpusRoster candidate marketplace and gets syndicated to 100+ ATS networks, niche boards, and aggregators. Candidates apply directly into your pipeline \u2014 no extra ads, no separate dashboards, no recruiter time lost to copy-paste.
             </Lede>
             <div className="mt-8 grid sm:grid-cols-3 gap-6">
@@ -226,12 +226,12 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* PLAN RECOMMENDATION */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-12">
             <Eyebrow>Which plan</Eyebrow>
-            <SectionH2 className="mt-4">For agencies, start on <Em>Business</Em>.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>For agencies, start on <Em>Business</Em>.</SectionH2>
+            <Lede>
               Pro fits solo recruiters and small shops with a few active retainers. Once you\u2019re juggling more than 5 active searches \u2014 or you want the full Sourcer Agent running daily across your desk \u2014 Business is the answer.
             </Lede>
           </div>
@@ -246,7 +246,7 @@ export default function ForAgenciesPage() {
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Manual sourcing + AI outreach</li>
               </ul>
             </Card>
-            <Card className="border-2 border-teal">
+            <Card>
               <div className="text-sm font-medium text-teal mb-2">Business \u2014 $230/mo \u2190 recommended</div>
               <h3 className="text-2xl font-serif text-graphite mb-4">For agencies running multiple desks</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
@@ -267,7 +267,7 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* FINAL CTA */}
-      <Section className="py-24 bg-cream">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <SectionH2>

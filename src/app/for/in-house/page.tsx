@@ -81,15 +81,15 @@ export default function ForInhousePage() {
   return (
     <main>
       {/* HERO */}
-      <Section className="pt-20 pb-16">
+      <Section>
         <Container>
           <div className="max-w-4xl">
             <Eyebrow>For In-house TA Teams</Eyebrow>
-            <DisplayH1 className="mt-6">
+            <DisplayH1>
               <Em>Stop paying agencies.</Em><br />
               Build the <Underline>recruiting machine</Underline> they wish they were.
             </DisplayH1>
-            <Lede className="mt-8 max-w-3xl">
+            <Lede>
               In-house TA teams have one structural problem: you\u2019re asked to compete with agencies on speed, quality, and reach \u2014 with a fraction of the headcount. OpusRoster gives you the leverage. Sourcing, scoring, outreach, reply management, and distribution \u2014 all running 24/7, all under your team\u2019s control.
             </Lede>
             <div className="mt-10 flex flex-wrap gap-4">
@@ -106,11 +106,11 @@ export default function ForInhousePage() {
       </Section>
 
       {/* PAIN */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>Why TA teams burn out</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               You weren\u2019t hired to do <Em>Boolean searches</Em> all day.
             </SectionH2>
           </div>
@@ -126,14 +126,14 @@ export default function ForInhousePage() {
       </Section>
 
       {/* PLATFORM */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The full platform</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               Six AI agents. <Underline>One unified pipeline.</Underline>
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               OpusRoster isn\u2019t a sourcing tool bolted onto an ATS. It\u2019s the entire recruiting workflow \u2014 from discovery to hire \u2014 designed for a single recruiter to run what used to take a team of five.
             </Lede>
           </div>
@@ -155,12 +155,12 @@ export default function ForInhousePage() {
       </Section>
 
       {/* SCREENSHOT */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <Eyebrow>Every candidate, scored</Eyebrow>
-            <SectionH2 className="mt-4">A talent pool that <Em>actually</Em> reflects fit.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>A talent pool that <Em>actually</Em> reflects fit.</SectionH2>
+            <Lede>
               Stop scrolling through 200 resumes hoping for one match. OpusRoster ranks every candidate against the role, with reasoning you can audit.
             </Lede>
           </div>
@@ -175,14 +175,14 @@ export default function ForInhousePage() {
       </Section>
 
       {/* MATH */}
-      <Section className="py-20">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-16">
             <Eyebrow>The math</Eyebrow>
-            <SectionH2 className="mt-4">
+            <SectionH2>
               <Em>One placement</Em> pays for OpusRoster for the next decade.
             </SectionH2>
-            <Lede className="mt-6">
+            <Lede>
               Average agency fee on a $100K role: $25\u201330K. OpusRoster Business is $2,760/year. The math is so lopsided we feel weird about it.
             </Lede>
           </div>
@@ -199,14 +199,14 @@ export default function ForInhousePage() {
       </Section>
 
       {/* DISTRIBUTION */}
-      <Section className="py-20 bg-navy text-white">
+      <Section>
         <Container>
           <div className="max-w-3xl">
-            <Eyebrow className="text-mint">Beyond your ATS</Eyebrow>
-            <SectionH2 className="mt-4 text-white">
+            <Eyebrow>Beyond your ATS</Eyebrow>
+            <SectionH2>
               Reach candidates your ATS will <Underline>never</Underline> see.
             </SectionH2>
-            <Lede className="mt-6 text-white/80">
+            <Lede>
               Your applicants are 3% of the qualified market. The other 97% are passive candidates who never apply anywhere. OpusRoster\u2019s Sourcer Agent finds them, the marketplace surfaces your roles to active job-seekers, and 100+ ATS network integrations make sure no qualified candidate slips through because they used a different platform.
             </Lede>
           </div>
@@ -214,12 +214,12 @@ export default function ForInhousePage() {
       </Section>
 
       {/* PLAN RECOMMENDATION */}
-      <Section className="py-20 bg-white">
+      <Section>
         <Container>
           <div className="max-w-3xl mb-12">
             <Eyebrow>Which plan</Eyebrow>
-            <SectionH2 className="mt-4">For TA teams, <Em>Business</Em> is the floor.</SectionH2>
-            <Lede className="mt-6">
+            <SectionH2>For TA teams, <Em>Business</Em> is the floor.</SectionH2>
+            <Lede>
               In-house teams typically run 10\u201340 active reqs at any given time. Pro\u2019s 5-job cap is too tight for anything past a 3-person team. Business gives you unlimited active jobs and the full Sourcer Agent on autopilot.
             </Lede>
           </div>
@@ -233,7 +233,7 @@ export default function ForInhousePage() {
                 <li className="flex items-start gap-2"><Check className="w-4 h-4 text-teal mt-0.5 shrink-0" />Triage Agent (daily)</li>
               </ul>
             </Card>
-            <Card className="border-2 border-teal">
+            <Card>
               <div className="text-sm font-medium text-teal mb-2">Business \u2014 $230/mo \u2190 recommended</div>
               <h3 className="text-2xl font-serif text-graphite mb-4">For multi-recruiter TA teams</h3>
               <ul className="space-y-2 text-sm text-graphite/80">
@@ -254,7 +254,7 @@ export default function ForInhousePage() {
       </Section>
 
       {/* FINAL CTA */}
-      <Section className="py-24 bg-cream">
+      <Section>
         <Container>
           <div className="max-w-3xl mx-auto text-center">
             <SectionH2>
