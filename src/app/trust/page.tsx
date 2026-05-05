@@ -165,7 +165,7 @@ export default function TrustPage() {
       </Section>
 
       {/* AI ETHICS */}
-      <div className="bg-navy">
+      <div className="bg-graphite">
       <Section>
         <Container>
           <div className="max-w-3xl mb-16">

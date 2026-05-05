@@ -199,7 +199,7 @@ export default function ForAgenciesPage() {
       </Section>
 
       {/* DISTRIBUTION */}
-      <div className="bg-navy">
+      <div className="bg-graphite">
       <Section>
         <Container>
           <div className="max-w-3xl">
