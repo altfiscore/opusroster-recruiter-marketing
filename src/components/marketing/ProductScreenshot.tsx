@@ -1,106 +1,104 @@
-// src/components/marketing/ProductScreenshot.tsx
-// Renders a product screenshot with edge fade and optional blur overlays
-// to protect sensitive data while keeping the marketing visual real.
-
-import Image from "next/image";
+"use client";
 
 interface BlurRegion {
-  /** percentage from left (0-100) */
-  x: number;
-  /** percentage from top (0-100) */
-  y: number;
-  /** percentage width */
-  w: number;
-  /** percentage height */
-  h: number;
+  top?: string;
+  bottom?: string;
+  left?: string;
+  right?: string;
+  height?: string;
 }
 
 interface ProductScreenshotProps {
   src: string;
   alt: string;
-  /** width in pixels - actual rendered size */
-  width?: number;
-  height?: number;
-  /** apply edge fade (top + bottom) so screenshot blends into background */
-  edgeFade?: boolean;
-  /** blur regions in % coordinates (e.g., for emails / names) */
+  /** Which edges to fade out */
+  fadeEdges?: ("top" | "bottom" | "left" | "right")[];
+  /** Specific regions to blur (e.g. contact name rows) */
   blurRegions?: BlurRegion[];
-  /** rounded corner size */
-  radius?: "lg" | "xl" | "2xl" | "3xl";
-  /** add subtle shadow */
-  shadow?: boolean;
   className?: string;
+  priority?: boolean;
 }
 
-export function ProductScreenshot({
+export default function ProductScreenshot({
   src,
   alt,
-  width = 1400,
-  height = 900,
-  edgeFade = true,
+  fadeEdges = ["bottom", "left", "right"],
   blurRegions = [],
-  radius = "2xl",
-  shadow = true,
   className = "",
 }: ProductScreenshotProps) {
-  const radiusClass = {
-    lg: "rounded-lg",
-    xl: "rounded-xl",
-    "2xl": "rounded-2xl",
-    "3xl": "rounded-3xl",
-  }[radius];
-
   return (
     <div
-      className={`relative overflow-hidden ${radiusClass} ${
-        shadow ? "shadow-2xl shadow-[#2A2D30]/15 ring-1 ring-[#2A2D30]/8" : ""
-      } ${className}`}
-      style={{
-        // Edge fade via CSS mask
-        WebkitMaskImage: edgeFade
-          ? "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)"
-          : undefined,
-        maskImage: edgeFade
-          ? "linear-gradient(to bottom, black 0%, black 70%, transparent 100%)"
-          : undefined,
-      }}
+      className={`relative overflow-hidden rounded-xl shadow-2xl border border-gray-200/60 ${className}`}
+      style={{ background: "#f8fafc" }}
     >
-      <Image
+      {/* The screenshot */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={src}
         alt={alt}
-        width={width}
-        height={height}
-        className="block w-full h-auto"
-        priority={false}
+        className="w-full h-auto block"
+        style={{ display: "block" }}
       />
 
-      {/* Blur regions overlay */}
+      {/* Blur overlay regions (contact names, emails, etc.) */}
       {blurRegions.map((region, i) => (
         <div
           key={i}
-          aria-hidden
+          className="absolute pointer-events-none"
           style={{
-            position: "absolute",
-            left: `${region.x}%`,
-            top: `${region.y}%`,
-            width: `${region.w}%`,
-            height: `${region.h}%`,
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            background: "rgba(255,255,255,0.05)",
+            top: region.top ?? "auto",
+            bottom: region.bottom ?? "auto",
+            left: region.left ?? "0",
+            right: region.right ?? "0",
+            height: region.height ?? "40px",
+            backdropFilter: "blur(6px)",
+            WebkitBackdropFilter: "blur(6px)",
+            background: "rgba(248,250,252,0.25)",
           }}
         />
       ))}
+
+      {/* Edge fades */}
+      {fadeEdges.includes("bottom") && (
+        <div
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: "45%",
+            background:
+              "linear-gradient(to bottom, transparent 0%, rgba(245,247,250,0.7) 60%, rgba(245,247,250,1) 100%)",
+          }}
+        />
+      )}
+      {fadeEdges.includes("top") && (
+        <div
+          className="absolute top-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: "20%",
+            background:
+              "linear-gradient(to top, transparent 0%, rgba(245,247,250,0.8) 100%)",
+          }}
+        />
+      )}
+      {fadeEdges.includes("left") && (
+        <div
+          className="absolute top-0 left-0 bottom-0 pointer-events-none"
+          style={{
+            width: "6%",
+            background:
+              "linear-gradient(to left, transparent 0%, rgba(245,247,250,0.9) 100%)",
+          }}
+        />
+      )}
+      {fadeEdges.includes("right") && (
+        <div
+          className="absolute top-0 right-0 bottom-0 pointer-events-none"
+          style={{
+            width: "6%",
+            background:
+              "linear-gradient(to right, transparent 0%, rgba(245,247,250,0.9) 100%)",
+          }}
+        />
+      )}
     </div>
   );
-}
-
-/** Specialized version for hero - large, dramatic edge fade */
-export function HeroScreenshot(props: Omit<ProductScreenshotProps, "edgeFade" | "radius">) {
-  return <ProductScreenshot {...props} edgeFade={true} radius="3xl" />;
-}
-
-/** Specialized for inline feature use - tighter, no fade */
-export function InlineScreenshot(props: Omit<ProductScreenshotProps, "edgeFade">) {
-  return <ProductScreenshot {...props} edgeFade={false} radius="xl" />;
 }
