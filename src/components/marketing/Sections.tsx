@@ -141,8 +141,25 @@ export function SecondaryButton({
 /** Card for feature blocks, "for whom" cards, etc */
 export function Card({
   children,
-  className = "",
+  className,
   href,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  href?: string;
+}) {
+  const baseClasses = `block rounded-2xl border border-[#2A2D30]/10 bg-white p-7 transition ${
+    href ? "hover:-translate-y-0.5 hover:border-[#3AB0A2]/30 hover:shadow-lg hover:shadow-[#2A2D30]/5" : ""
+  } ${className ?? ""}`;
+
+  if (href) {
+    return (
+      <Link href={href} className={baseClasses}>
+        {children}
+      </Link>
+    );
+  }
+  return <div className={baseClasses}>{children}</div>;
 }: {
   children: React.ReactNode;
   className?: string;
