@@ -62,7 +62,7 @@ const PLANS: Plan[] = [
     monthlyAnnualEquivalent: 71,
     cta: "Start with Pro",
     features: [
-      "5 active jobs",
+      "Unlimited active jobs",
       "350 sourcing credits / month",
       "3 clients in portal",
       "Triage Agent — daily, 50 candidates",
