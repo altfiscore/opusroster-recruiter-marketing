@@ -24,6 +24,20 @@ const API_URL =
   (process.env.NEXT_PUBLIC_RECRUITER_API_URL ??
     "https://app.recruiter.opusroster.com") + "/api/public/jobs";
 
+const TRACK_URL =
+  (process.env.NEXT_PUBLIC_RECRUITER_API_URL ??
+    "https://app.recruiter.opusroster.com") + "/api/public/jobs/track";
+
+function trackEvent(jobId: string, eventType: "impression" | "view" | "click") {
+  fetch(TRACK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ job_id: jobId, event_type: eventType, source: "marketing_site" }),
+    keepalive: true,
+  }).catch(() => {});
+}
+
+
 interface Job {
   id: string;
   title: string;
@@ -95,7 +109,11 @@ export default function JobsPage() {
       .then((d) => {
         setJobs(d.jobs ?? []);
         setLoading(false);
-        if (d.jobs?.length > 0) setSelectedJob(d.jobs[0]);
+        if (d.jobs?.length > 0) {
+          setSelectedJob(d.jobs[0]);
+          // Track impressions for all loaded jobs (job board page load)
+          (d.jobs as Job[]).forEach((j) => trackEvent(j.id, "impression"));
+        }
       })
       .catch(() => setLoading(false));
   }, []);
@@ -143,7 +161,7 @@ export default function JobsPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Job title or company..."
-              className="w-full bg-transparent text-[14px] text-graphite outline-none placeholder:text-[#9CA0A8]"
+              className="w-full bg-transparent text-[14px] text-graphite outline-none placeholder:text-[#7A7E84]"
             />
           </div>
           <div className="flex items-center gap-2 rounded-2xl border border-[#E4E7EB] bg-white px-4 py-3">
@@ -152,7 +170,7 @@ export default function JobsPage() {
               value={locationQuery}
               onChange={(e) => setLocationQuery(e.target.value)}
               placeholder="City or state..."
-              className="w-full bg-transparent text-[14px] text-graphite outline-none placeholder:text-[#9CA0A8]"
+              className="w-full bg-transparent text-[14px] text-graphite outline-none placeholder:text-[#7A7E84]"
             />
           </div>
           <select
@@ -180,20 +198,20 @@ export default function JobsPage() {
           </button>
         </div>
 
-        <p className="mb-4 text-[13px] text-[#6B6F76]">
+        <p className="mb-4 text-[13px] text-[#4A4D52]">
           {loading ? "Loading roles..." : `${filtered.length} open roles`}
         </p>
 
         {loading ? (
           <div className="rounded-2xl border border-[#E4E7EB] bg-white p-16 text-center">
-            <p className="text-[14px] text-[#6B6F76]">Finding roles for you...</p>
+            <p className="text-[14px] text-[#4A4D52]">Finding roles for you...</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="rounded-2xl border border-[#E4E7EB] bg-white p-16 text-center">
             <p className="text-[15px] font-medium text-graphite mb-2">
               No roles match those filters
             </p>
-            <p className="text-[13px] text-[#6B6F76]">
+            <p className="text-[13px] text-[#4A4D52]">
               Try clearing a filter or searching a different keyword.
             </p>
           </div>
@@ -206,7 +224,7 @@ export default function JobsPage() {
                 return (
                   <button
                     key={job.id}
-                    onClick={() => setSelectedJob(job)}
+                    onClick={() => { setSelectedJob(job); trackEvent(job.id, "view"); }}
                     className={
                       "rounded-2xl border bg-white p-5 text-left transition " +
                       (isSelected
@@ -222,11 +240,11 @@ export default function JobsPage() {
                         {companyInitials(job.company)}
                       </div>
                       <div className="min-w-0 flex-1">
-                        <p className="truncate text-[12px] text-[#6B6F76]">{job.company}</p>
+                        <p className="truncate text-[12px] text-[#4A4D52]">{job.company}</p>
                         <h3 className="mb-1 text-[15px] font-semibold leading-snug text-graphite">
                           {job.title}
                         </h3>
-                        <p className="mb-2 text-[12px] text-[#6B6F76]">
+                        <p className="mb-2 text-[12px] text-[#4A4D52]">
                           {job.remote ? "Remote · " : ""}
                           {job.location ?? ""}
                         </p>
@@ -257,26 +275,26 @@ export default function JobsPage() {
                       );
                     })()}
                     <div>
-                      <p className="mb-1 text-[13px] text-[#6B6F76]">{selectedJob.company}</p>
+                      <p className="mb-1 text-[13px] text-[#4A4D52]">{selectedJob.company}</p>
                       <h2 className="mb-3 font-display text-[26px] leading-tight text-graphite">
                         {selectedJob.title}
                       </h2>
                       <div className="flex flex-wrap gap-4">
                         {selectedJob.location && (
-                          <span className="flex items-center gap-1.5 text-[13px] text-[#6B6F76]">
+                          <span className="flex items-center gap-1.5 text-[13px] text-[#4A4D52]">
                             <MapPin size={14} /> {selectedJob.location}
                           </span>
                         )}
                         {selectedJob.remote && (
-                          <span className="flex items-center gap-1.5 text-[13px] text-[#6B6F76]">
+                          <span className="flex items-center gap-1.5 text-[13px] text-[#4A4D52]">
                             <Wifi size={14} /> Remote OK
                           </span>
                         )}
-                        <span className="flex items-center gap-1.5 text-[13px] text-[#6B6F76]">
+                        <span className="flex items-center gap-1.5 text-[13px] text-[#4A4D52]">
                           <Clock size={14} /> {selectedJob.employment_type}
                         </span>
                         {selectedJob.salary && (
-                          <span className="flex items-center gap-1.5 text-[13px] text-[#6B6F76]">
+                          <span className="flex items-center gap-1.5 text-[13px] text-[#4A4D52]">
                             <DollarSign size={14} /> {selectedJob.salary}
                           </span>
                         )}
@@ -286,7 +304,7 @@ export default function JobsPage() {
                   <div className="flex shrink-0 gap-2">
                     <button
                       aria-label="Save job"
-                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E4E7EB] text-[#6B6F76] transition hover:border-[#C9CDD3]"
+                      className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#E4E7EB] text-[#4A4D52] transition hover:border-[#C9CDD3]"
                     >
                       <Heart size={17} />
                     </button>
@@ -294,6 +312,7 @@ export default function JobsPage() {
                       href={selectedJob.apply_url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackEvent(selectedJob.id, "click")}
                       className="inline-flex items-center gap-2 rounded-xl bg-teal px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-[#329a8e]"
                     >
                       Apply now <ArrowRight size={15} />
@@ -302,7 +321,7 @@ export default function JobsPage() {
                 </div>
 
                 <h3 className="mb-3 text-[14px] font-semibold text-graphite">About this role</h3>
-                <p className="mb-6 whitespace-pre-wrap text-[14px] leading-[1.7] text-[#5C5850]">
+                <p className="mb-6 whitespace-pre-wrap text-[14px] leading-[1.75] text-[#3A3D40] font-medium">
                   {selectedJob.description_preview}
                   {selectedJob.description_preview.length >= 200 && "…"}
                 </p>
@@ -316,7 +335,7 @@ export default function JobsPage() {
                       {selectedJob.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="rounded-full border border-mint bg-[#F0FDF8] px-3 py-1.5 text-[12px] text-[#085041]"
+                          className="rounded-full border border-mint bg-[#F0FDF8] px-3 py-1.5 text-[12px] text-[#085041] font-medium"
                         >
                           {skill}
                         </span>
@@ -325,7 +344,7 @@ export default function JobsPage() {
                   </>
                 )}
 
-                <div className="flex items-center gap-2 rounded-xl bg-cream p-4 text-[12px] text-[#6B6F76]">
+                <div className="flex items-center gap-2 rounded-xl bg-cream p-4 text-[12px] text-[#4A4D52]">
                   <Building2 size={14} />
                   Posted via {selectedJob.source} · {timeAgo(selectedJob.posted_at)}
                 </div>
