@@ -217,7 +217,7 @@ export default function JobsPage() {
           </div>
         ) : (
           <div className="grid gap-4 lg:grid-cols-[380px_1fr]">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-h-[calc(100vh-220px)] overflow-y-auto pr-1">
               {filtered.map((job) => {
                 const isSelected = selectedJob?.id === job.id;
                 const av = avatarColor(job.company);
@@ -260,7 +260,7 @@ export default function JobsPage() {
             </div>
 
             {selectedJob && (
-              <div className="rounded-2xl border border-[#E4E7EB] bg-white p-8">
+              <div className="rounded-2xl border border-[#E4E7EB] bg-white p-8 max-h-[calc(100vh-220px)] overflow-y-auto lg:sticky lg:top-6">
                 <div className="mb-6 flex items-start justify-between gap-4 border-b border-[#E4E7EB] pb-6">
                   <div className="flex gap-4">
                     {(() => {
