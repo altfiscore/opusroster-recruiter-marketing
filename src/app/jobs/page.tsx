@@ -52,6 +52,8 @@ interface Job {
   posted_at: string;
   apply_url: string;
   source: string;
+  is_promoted?: boolean;
+  is_urgent?: boolean;
 }
 
 const INDUSTRY_KEYWORDS: Record<string, string[]> = {
@@ -69,6 +71,11 @@ function timeAgo(dateStr: string) {
   if (days < 7) return `${days} days ago`;
   if (days < 30) return `${Math.floor(days / 7)} weeks ago`;
   return `${Math.floor(days / 30)} months ago`;
+}
+
+function isNewJob(dateStr: string) {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  return diff < 3 * 86400000;
 }
 
 function companyInitials(name: string) {
@@ -92,6 +99,32 @@ function avatarColor(seed: string) {
   let hash = 0;
   for (const ch of seed) hash = (hash * 31 + ch.charCodeAt(0)) % AVATAR_COLORS.length;
   return AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length];
+}
+
+function JobBadges({ job, size = "sm" }: { job: Job; size?: "sm" | "md" }) {
+  const badges: { label: string; bg: string; color: string; icon: string }[] = [];
+  if (job.is_urgent) badges.push({ label: "Urgent", bg: "#FF6B6B", color: "#FFFFFF", icon: "\uD83D\uDD25" });
+  if (isNewJob(job.posted_at)) badges.push({ label: "New", bg: "#F0997B", color: "#4A1B0C", icon: "\u2728" });
+  if (job.is_promoted) badges.push({ label: "Promoted", bg: "#3AB0A2", color: "#FFFFFF", icon: "\uD83D\uDE80" });
+  const shown = badges.slice(0, 2);
+  if (shown.length === 0) return null;
+  const fontSize = size === "sm" ? 10 : 11;
+  const padY = size === "sm" ? 3 : 4;
+  const padX = size === "sm" ? 8 : 10;
+  return (
+    <div className="flex gap-1.5 flex-wrap">
+      {shown.map((b) => (
+        <span
+          key={b.label}
+          className="inline-flex items-center gap-1 rounded-full font-medium"
+          style={{ background: b.bg, color: b.color, fontSize, padding: `${padY}px ${padX}px` }}
+        >
+          <span style={{ fontSize: fontSize + 1 }}>{b.icon}</span>
+          {b.label}
+        </span>
+      ))}
+    </div>
+  );
 }
 
 export default function JobsPage() {
@@ -244,6 +277,9 @@ export default function JobsPage() {
                         <h3 className="mb-1 text-[15px] font-semibold leading-snug text-graphite">
                           {job.title}
                         </h3>
+                        <div className="mb-1.5">
+                          <JobBadges job={job} size="sm" />
+                        </div>
                         <p className="mb-2 text-[12px] text-[#4A4D52]">
                           {job.remote ? "Remote · " : ""}
                           {job.location ?? ""}
@@ -279,6 +315,9 @@ export default function JobsPage() {
                       <h2 className="mb-3 font-display text-[26px] leading-tight text-graphite">
                         {selectedJob.title}
                       </h2>
+                      <div className="mb-3">
+                        <JobBadges job={selectedJob} size="md" />
+                      </div>
                       <div className="flex flex-wrap gap-4">
                         {selectedJob.location && (
                           <span className="flex items-center gap-1.5 text-[13px] text-[#4A4D52]">
