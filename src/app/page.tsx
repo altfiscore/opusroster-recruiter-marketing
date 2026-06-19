@@ -163,7 +163,96 @@ export default function MarketingHome() {
         </Container>
       </Section>
 
-      {/* THE PROBLEM */}
+      {/* THE JOURNEY */}
+      <Section className="bg-white">
+        <Container>
+          <div className="mx-auto max-w-3xl text-center">
+            <Eyebrow color="teal">One platform, start to finish</Eyebrow>
+            <SectionH2>
+              Post a job. <span className="italic">Candidates find you.</span>
+              <br />
+              You find candidates. <span className="italic">Either way, you hire.</span>
+            </SectionH2>
+            <Lede className="mt-6">
+              Most tools make you pick a lane — search a database, or pay to get listed.
+              OpusRoster does both at once, then carries every candidate through one
+              honest pipeline to a hire.
+            </Lede>
+          </div>
+
+          <div className="mt-16">
+            {/* Step 1: Post */}
+            <div className="flex justify-center">
+              <div className="rounded-2xl border-2 border-[#2A2D30]/15 bg-white px-8 py-4 text-center">
+                <p className="font-display text-xl text-[#2A2D30]">Post a job</p>
+              </div>
+            </div>
+
+            {/* Connector down + split */}
+            <div className="mx-auto h-8 w-px bg-[#2A2D30]/15" />
+            <div className="mx-auto flex max-w-xl justify-between">
+              <div className="h-8 w-px bg-[#2A2D30]/15" />
+              <div className="h-8 w-px bg-[#2A2D30]/15" />
+            </div>
+
+            {/* Step 2: Split paths */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+              <div className="rounded-2xl border border-[#3AB0A2]/25 bg-[#3AB0A2]/5 p-6 text-center">
+                <p className="text-xs font-medium uppercase tracking-wider text-[#0F6E56]">You search out</p>
+                <h3 className="mt-2 font-display text-2xl text-[#2A2D30]">Search our database</h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#2A2D30]/65">
+                  Sourcer Agent searches our exclusive candidate database every morning, scores
+                  honestly, and shortlists only real fits.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[#FF6B6B]/25 bg-[#FF6B6B]/5 p-6 text-center">
+                <p className="text-xs font-medium uppercase tracking-wider text-[#993C1D]">Candidates come in</p>
+                <h3 className="mt-2 font-display text-2xl text-[#2A2D30]">Promote externally</h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#2A2D30]/65">
+                  One click distributes your listing to Google, Bing, and hundreds of job
+                  board partners. Pay only for clicks.
+                </p>
+              </div>
+            </div>
+
+            {/* Connector merge down */}
+            <div className="mx-auto flex max-w-xl justify-between">
+              <div className="h-8 w-px bg-[#2A2D30]/15" />
+              <div className="h-8 w-px bg-[#2A2D30]/15" />
+            </div>
+            <div className="mx-auto h-8 w-px bg-[#2A2D30]/15" />
+
+            {/* Step 3: Merged pipeline */}
+            <div className="flex justify-center">
+              <div className="rounded-2xl border-2 border-[#2A2D30]/15 bg-[#F5F7FA] px-8 py-5 text-center">
+                <p className="font-display text-xl text-[#2A2D30]">One scored pipeline</p>
+                <p className="mt-1 text-[13px] text-[#2A2D30]/55">Honest fit scores, no fake matches</p>
+              </div>
+            </div>
+
+            <div className="mx-auto h-8 w-px bg-[#2A2D30]/15" />
+
+            {/* Step 4: Interview */}
+            <div className="flex justify-center">
+              <div className="rounded-2xl border-2 border-[#2A2D30]/15 bg-white px-8 py-5 text-center">
+                <p className="font-display text-xl text-[#2A2D30]">Schedule and interview</p>
+                <p className="mt-1 text-[13px] text-[#2A2D30]/55">Transcribed and scored automatically</p>
+              </div>
+            </div>
+
+            <div className="mx-auto h-8 w-px bg-[#2A2D30]/15" />
+
+            {/* Step 5: Hire */}
+            <div className="flex justify-center">
+              <div className="rounded-2xl bg-[#1D3557] px-10 py-5 text-center">
+                <p className="font-display text-xl text-white">Hire</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+            {/* THE PROBLEM */}
       <Section className="bg-white">
         <Container>
           <div className="mx-auto max-w-3xl text-center">
