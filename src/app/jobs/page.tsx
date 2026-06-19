@@ -136,6 +136,21 @@ export default function JobsPage() {
   const [industry, setIndustry] = useState<string>("All");
   const [remoteOnly, setRemoteOnly] = useState(false);
 
+  const [detectedCity, setDetectedCity] = useState<string | null>(null);
+  const [geoApplied, setGeoApplied] = useState(false);
+
+  // Detect visitor location and auto-fill location filter (non-blocking, no permission prompt)
+  useEffect(() => {
+    fetch("/api/geo")
+      .then((r) => r.json())
+      .then((d) => {
+        if (d.city) {
+          setDetectedCity(d.city);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   useEffect(() => {
     fetch(API_URL + "?limit=100")
       .then((r) => r.json())
@@ -143,6 +158,7 @@ export default function JobsPage() {
         setJobs(d.jobs ?? []);
         setLoading(false);
         if (d.jobs?.length > 0) {
+          // do not override if user already typed something
           setSelectedJob(d.jobs[0]);
           // Track impressions for all loaded jobs (job board page load)
           (d.jobs as Job[]).forEach((j) => trackEvent(j.id, "impression"));
@@ -150,6 +166,13 @@ export default function JobsPage() {
       })
       .catch(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    if (detectedCity && !geoApplied && !locationQuery) {
+      setLocationQuery(detectedCity);
+      setGeoApplied(true);
+    }
+  }, [detectedCity, geoApplied, locationQuery]);
 
   const filtered = useMemo(() => {
     return jobs.filter((j) => {
@@ -201,10 +224,18 @@ export default function JobsPage() {
             <MapPin size={16} className="shrink-0 text-[#9CA0A8]" />
             <input
               value={locationQuery}
-              onChange={(e) => setLocationQuery(e.target.value)}
+              onChange={(e) => { setLocationQuery(e.target.value); setGeoApplied(true); }}
               placeholder="City or state..."
               className="w-full bg-transparent text-[14px] text-graphite outline-none placeholder:text-[#7A7E84]"
             />
+            {geoApplied && detectedCity && locationQuery === detectedCity && (
+              <button
+                onClick={() => { setLocationQuery(""); }}
+                className="shrink-0 text-[11px] font-medium text-[#3AB0A2] whitespace-nowrap hover:underline"
+              >
+                Clear
+              </button>
+            )}
           </div>
           <select
             value={industry}
