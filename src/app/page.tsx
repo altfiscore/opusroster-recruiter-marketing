@@ -72,7 +72,7 @@ const AGENTS = [
 const VALUE_PROPS = [
   { stat: "Up to 50%", label: "less than other AI recruiting platforms" },
   { stat: "5 agents", label: "working together — not just one tool" },
-  { stat: "800M+", label: "candidate profiles searchable" },
+  { stat: "Our database", label: "exclusive candidate access, not borrowed" },
   { stat: "5 days", label: "free trial — no credit card required" },
 ];
 
@@ -121,6 +121,31 @@ export default function MarketingHome() {
                 src={dashboardScreenshot}
                 alt="OpusRoster dashboard showing active searches, pipeline stages, and recent autopilot activity"
               />
+
+              {/* Job Promotion badge - sits below the hero screenshot */}
+              <Link href="/features/job-promotion" className="group mt-6 flex items-center gap-5 rounded-2xl border border-[#2A2D30]/10 bg-white p-5 transition hover:shadow-lg">
+                <div
+                  className="relative flex h-24 w-24 shrink-0 flex-col items-center justify-center rounded-full bg-[#FF6B6B] text-center transition group-hover:scale-105"
+                  style={{ transform: "rotate(-8deg)" }}
+                >
+                  <div className="absolute inset-[5px] rounded-full border-2 border-dashed border-white/40" />
+                  <span className="rounded-full bg-white px-1.5 py-px text-[7px] font-semibold uppercase tracking-wide text-[#993C1D]">
+                    New
+                  </span>
+                  <p className="mt-0.5 font-display text-[13px] leading-none text-white">Promote<br />jobs</p>
+                </div>
+                <div className="min-w-0">
+                  <span className="mb-1.5 inline-flex items-center gap-1.5 rounded-full bg-[#3AB0A2] px-2.5 py-0.5 text-[10px] font-medium text-white">
+                    <Rocket size={10} strokeWidth={2} /> Job promotion
+                  </span>
+                  <h3 className="text-[14px] font-semibold leading-snug text-[#2A2D30]">
+                    We bring candidates to you, not just search.
+                  </h3>
+                  <p className="mt-1 text-[12px] leading-relaxed text-[#2A2D30]/60">
+                    Promoted to Google, Bing &amp; hundreds of job boards. Pay only per click.
+                  </p>
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -135,58 +160,6 @@ export default function MarketingHome() {
               </div>
             ))}
           </div>
-        </Container>
-      </Section>
-
-      {/* JOB PROMOTION CALLOUT */}
-      <Section>
-        <Container>
-          <Link href="/features/job-promotion" className="group block">
-            <div className="flex flex-wrap items-center gap-8 rounded-3xl border border-[#2A2D30]/10 bg-white p-8 transition hover:shadow-lg lg:p-10">
-              {/* Starburst badge */}
-              <div
-                className="relative flex h-44 w-44 shrink-0 flex-col items-center justify-center rounded-full bg-[#FF6B6B] text-center transition group-hover:scale-105"
-                style={{ transform: "rotate(-8deg)" }}
-              >
-                <div className="absolute inset-[9px] rounded-full border-2 border-dashed border-white/40" />
-                <span className="mb-1.5 rounded-full bg-white px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[#993C1D]">
-                  New
-                </span>
-                <p className="font-display text-xl leading-tight text-white">
-                  Promote
-                  <br />
-                  your jobs
-                </p>
-                <p className="mt-1.5 max-w-[120px] text-[10px] leading-snug text-white/90">
-                  Inbound applicants, not just search
-                </p>
-              </div>
-
-              {/* Pitch card */}
-              <div className="flex-1 min-w-[260px] rounded-2xl bg-[#F5F7FA] p-6">
-                <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#3AB0A2] px-3 py-1 text-xs font-medium text-white">
-                  <Rocket size={12} strokeWidth={2} /> Job promotion
-                </span>
-                <h3 className="text-[18px] font-semibold leading-snug text-[#2A2D30]">
-                  Most recruiting tools only search. We bring candidates to you.
-                </h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-[#2A2D30]/65">
-                  Promote any job to Google, Bing, and hundreds of job boards. Inbound
-                  applicants land straight in your pipeline — already scored by AI.
-                </p>
-                <div className="mt-4 flex gap-8">
-                  <div>
-                    <p className="text-[17px] font-semibold text-[#2A2D30]">Inbound</p>
-                    <p className="text-[11px] text-[#2A2D30]/55">not just outbound search</p>
-                  </div>
-                  <div>
-                    <p className="text-[17px] font-semibold text-[#2A2D30]">Per-click</p>
-                    <p className="text-[11px] text-[#2A2D30]/55">pay only for results</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
         </Container>
       </Section>
 
