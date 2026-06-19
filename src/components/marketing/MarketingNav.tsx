@@ -9,10 +9,12 @@ import { ChevronDown, Menu, X } from "lucide-react";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter.vercel.app";
 
 const FEATURES = [
+  { href: "/features/job-promotion", label: "Job Promotion", desc: "Inbound applicants, not just search" },
   { href: "/features/sourcer-agent", label: "Sourcer Agent", desc: "Auto-source candidates daily" },
   { href: "/features/triage-agent", label: "Triage Agent", desc: "Auto-shortlist top fits" },
   { href: "/features/outreach-agent", label: "Outreach Agent", desc: "AI-personalized emails" },
   { href: "/features/reply-agent", label: "Reply Agent", desc: "Classify, draft, escalate" },
+  { href: "/features/canvass", label: "Canvass", desc: "Video interviews, included free" },
   { href: "/features/client-portal", label: "Client Portal", desc: "Share pipeline with clients" },
 ];
 
