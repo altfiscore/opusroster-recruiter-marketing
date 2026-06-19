@@ -16,7 +16,7 @@ import {
   Section,
 } from "@/components/marketing/Sections";
 import ProductScreenshot from "@/components/marketing/ProductScreenshot";
-import { Search, Filter, Send, MessageSquare, Calendar, Users, ArrowRight, Check } from "lucide-react";
+import { Search, Filter, Send, MessageSquare, Calendar, Users, ArrowRight, Check, Rocket } from "lucide-react";
 import { dashboardScreenshot } from "@/lib/screenshots";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://opus-rosterrecruiter.vercel.app";
@@ -135,6 +135,58 @@ export default function MarketingHome() {
               </div>
             ))}
           </div>
+        </Container>
+      </Section>
+
+      {/* JOB PROMOTION CALLOUT */}
+      <Section>
+        <Container>
+          <Link href="/features/job-promotion" className="group block">
+            <div className="flex flex-wrap items-center gap-8 rounded-3xl border border-[#2A2D30]/10 bg-white p-8 transition hover:shadow-lg lg:p-10">
+              {/* Starburst badge */}
+              <div
+                className="relative flex h-44 w-44 shrink-0 flex-col items-center justify-center rounded-full bg-[#FF6B6B] text-center transition group-hover:scale-105"
+                style={{ transform: "rotate(-8deg)" }}
+              >
+                <div className="absolute inset-[9px] rounded-full border-2 border-dashed border-white/40" />
+                <span className="mb-1.5 rounded-full bg-white px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-[#993C1D]">
+                  New
+                </span>
+                <p className="font-display text-xl leading-tight text-white">
+                  Promote
+                  <br />
+                  your jobs
+                </p>
+                <p className="mt-1.5 max-w-[120px] text-[10px] leading-snug text-white/90">
+                  Inbound applicants, not just search
+                </p>
+              </div>
+
+              {/* Pitch card */}
+              <div className="flex-1 min-w-[260px] rounded-2xl bg-[#F5F7FA] p-6">
+                <span className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-[#3AB0A2] px-3 py-1 text-xs font-medium text-white">
+                  <Rocket size={12} strokeWidth={2} /> Job promotion
+                </span>
+                <h3 className="text-[18px] font-semibold leading-snug text-[#2A2D30]">
+                  Most recruiting tools only search. We bring candidates to you.
+                </h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-[#2A2D30]/65">
+                  Promote any job to Google, Bing, and hundreds of job boards. Inbound
+                  applicants land straight in your pipeline — already scored by AI.
+                </p>
+                <div className="mt-4 flex gap-8">
+                  <div>
+                    <p className="text-[17px] font-semibold text-[#2A2D30]">Inbound</p>
+                    <p className="text-[11px] text-[#2A2D30]/55">not just outbound search</p>
+                  </div>
+                  <div>
+                    <p className="text-[17px] font-semibold text-[#2A2D30]">Per-click</p>
+                    <p className="text-[11px] text-[#2A2D30]/55">pay only for results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
         </Container>
       </Section>
 
